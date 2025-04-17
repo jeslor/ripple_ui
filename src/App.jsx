@@ -33,9 +33,9 @@ function App() {
               // transform: "translate(-50%, -50%)",
               borderRadius: "50%",
               transformOrigin: "50% 50%",
-              animation: `scale ${1 + i * 0.2}s linear infinite alternate`,
-              animationDelay: `${i * 0.1}s`,
-              boxShadow: `0 0 0 2px rgba(255, 255, 255, 0.1), 0 0 0 4px rgba(255, 255, 255, 0.1), 0 0 0 6px rgba(255, 255, 255, 0.1), 0 0 0 8px rgba(255, 255, 255, 0.1), 0 0 0 10px rgba(255, 255, 255, 0.1)`,
+              animation: `scale ${i + 1 * 2}s linear infinite alternate`,
+              animationDelay: `${i + 2}s`,
+              // boxShadow: `0 0 0 2px rgba(255, 255, 255, 0.1), 0 0 0 4px rgba(255, 255, 255, 0.1), 0 0 0 6px rgba(255, 255, 255, 0.1), 0 0 0 8px rgba(255, 255, 255, 0.1), 0 0 0 10px rgba(255, 255, 255, 0.1)`,
               background: `radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 20%, rgba(255, 255, 255, 0.1) 40%, rgba(255, 255, 255, 0.1) 60%, rgba(255, 255, 255, 0.1) 80%, rgba(255, 255, 255, 0.1) 100%)`,
             }}
           />
@@ -65,6 +65,7 @@ function App() {
               key={i}
               className="absolute w-10 h-10 rounded-full bg-white shadow-lg flex items-center justify-center "
               style={{
+                animation: `scale 1s linear infinite alternate`,
                 left: `calc(50% + ${x}px - 20px)`,
                 top: `calc(50% + ${y}px - 20px)`,
               }}
