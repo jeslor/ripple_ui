@@ -22,45 +22,45 @@ function App() {
               transformOrigin: "50% 50%",
               backgroundColor: `rgba(80, 80, 80, 0.${Math.abs(i + 1 - 8)})`,
               zIndex: `${Math.abs(i - 8)}`,
-              animation: `scale 2.2s cubic-bezier(0.66, 0, 0, 1) infinite`,
+              animation: `scale 3.2s cubic-bezier(0.66, 0, 0, 1.1) infinite`,
               animationDelay: `${i * 0.12}s`,
             }}
-          />
+          >
+            {[
+              { angle: 0, icon: "🔥" },
+              { angle: 30, icon: "⚡" },
+              { angle: 60, icon: "💧" },
+              { angle: 90, icon: "🌐" },
+              { angle: 120, icon: "💊" },
+              { angle: 150, icon: "📦" },
+              { angle: 180, icon: "🧬" },
+              { angle: 210, icon: "🎯" },
+              { angle: 240, icon: "🚀" },
+              { angle: 270, icon: "🧠" },
+              { angle: 300, icon: "🎮" },
+              { angle: 330, icon: "🧰" },
+            ].map(({ angle, icon }, i) => {
+              const radius = (200 + i * 80) / 2;
+              const rad = (angle * Math.PI) / 180;
+              const x = Math.cos(rad) * radius;
+              const y = Math.sin(rad) * radius;
+
+              return (
+                <div
+                  key={i}
+                  className="absolute z-[10] w-10 h-10 rounded-full bg-white shadow-lg flex items-center justify-center "
+                  style={{
+                    animation: `scale 1s linear infinite alternate`,
+                    left: `calc(50% + ${x}px - 20px)`,
+                    top: `calc(50% + ${y}px - 20px)`,
+                  }}
+                >
+                  {icon}
+                </div>
+              );
+            })}
+          </div>
         ))}
-
-        {[
-          { angle: 0, icon: "🔥" },
-          { angle: 30, icon: "⚡" },
-          { angle: 60, icon: "💧" },
-          { angle: 90, icon: "🌐" },
-          { angle: 120, icon: "💊" },
-          { angle: 150, icon: "📦" },
-          { angle: 180, icon: "🧬" },
-          { angle: 210, icon: "🎯" },
-          { angle: 240, icon: "🚀" },
-          { angle: 270, icon: "🧠" },
-          { angle: 300, icon: "🎮" },
-          { angle: 330, icon: "🧰" },
-        ].map(({ angle, icon }, i) => {
-          const radius = 240;
-          const rad = (angle * Math.PI) / 180;
-          const x = Math.cos(rad) * radius;
-          const y = Math.sin(rad) * radius;
-
-          return (
-            <div
-              key={i}
-              className="absolute z-[10] w-10 h-10 rounded-full bg-white shadow-lg flex items-center justify-center "
-              style={{
-                animation: `scale 1s linear infinite alternate`,
-                left: `calc(50% + ${x}px - 20px)`,
-                top: `calc(50% + ${y}px - 20px)`,
-              }}
-            >
-              {icon}
-            </div>
-          );
-        })}
       </div>
     </main>
   );
