@@ -22,8 +22,8 @@ function App() {
               transformOrigin: "50% 50%",
               backgroundColor: `rgba(80, 80, 80, 0.${Math.abs(i + 1 - 8)})`,
               zIndex: `${Math.abs(i - 8)}`,
-              animation: `scale 1s linear forwards alternate`,
-              animationDelay: `${i}s`,
+              animation: `scale 2.2s cubic-bezier(0.66, 0, 0, 1) infinite`,
+              animationDelay: `${i * 0.12}s`,
             }}
           />
         ))}
