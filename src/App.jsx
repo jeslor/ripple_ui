@@ -15,15 +15,15 @@ function App() {
             key={i}
             className={`absolute  rounded-full border-[1px]  transition-all duration-1000 ease-in-out`}
             style={{
-              width: `${200 + i * 80}px`,
-              height: `${200 + i * 80}px`,
+              width: `${200 + i * 60}px`,
+              height: `${200 + i * 60}px`,
               borderColor: `rgba(100, 100, 100, 0.${Math.abs(i + 1 - 9)})`,
               borderRadius: "50%",
               transformOrigin: "50% 50%",
               backgroundColor: `rgba(80, 80, 80, 0.${Math.abs(i + 1 - 8)})`,
               zIndex: `${Math.abs(i - 8)}`,
-              animation: `scale 3.2s cubic-bezier(0.66, 0, 0, 1.1) infinite`,
-              animationDelay: `${i * 0.12}s`,
+              animation: `scale 3.2s cubic-bezier(0.66, 0, 0, 1.3) infinite`,
+              animationDelay: `${i * 0.15}s`,
             }}
           >
             {[
@@ -40,7 +40,7 @@ function App() {
               { angle: 300, icon: "🎮" },
               { angle: 330, icon: "🧰" },
             ].map(({ angle, icon }, i) => {
-              const radius = (200 + i * 80) / 2;
+              const radius = (200 + i * 30) / 2;
               const rad = (angle * Math.PI) / 180;
               const x = Math.cos(rad) * radius;
               const y = Math.sin(rad) * radius;
