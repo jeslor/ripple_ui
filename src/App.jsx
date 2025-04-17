@@ -3,19 +3,6 @@ import { useEffect, useState } from "react";
 import "./App.css";
 
 function App() {
-  const scaleAnimation = `
-    @keyframes scale {
-      0% {
-        transform: scale(1);
-      }
-      50% {
-        transform: scale(1.2);
-      }
-      100% {
-        transform: scale(1);
-      }
-    }
-  `;
   return (
     <main className="h-screen w-screen bg-black flex justify-center items-center">
       <div className="relative w-[600px] h-[600px] mx-auto my-20 flex items-center justify-center ">
@@ -33,9 +20,10 @@ function App() {
               borderColor: `rgba(100, 100, 100, 0.${Math.abs(i + 1 - 9)})`,
               borderRadius: "50%",
               transformOrigin: "50% 50%",
-              animationDelay: `${i * 0.2}s`,
               backgroundColor: `rgba(80, 80, 80, 0.${Math.abs(i + 1 - 8)})`,
               zIndex: `${Math.abs(i - 8)}`,
+              animation: `scale 1s linear forwards alternate`,
+              animationDelay: `${i}s`,
             }}
           />
         ))}
