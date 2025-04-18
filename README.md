@@ -12,4 +12,4 @@ A beautiful, interactive ripple-based UI layout for organizing icons, apps, or e
 
 ## 🛠 Tech Stack
 
-- HTML5 / CSS3 / JavaScript
+- HTML5 / CSS3 / Reactj s
