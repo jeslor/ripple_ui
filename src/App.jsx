@@ -2,6 +2,29 @@ import { useEffect, useState } from "react";
 
 import "./App.css";
 
+const rings = [
+  [
+    { angle: 0, icon: "🔥" },
+    { angle: 30, icon: "⚡" },
+    { angle: 60, icon: "💧" },
+  ],
+  [
+    { angle: 90, icon: "🌐" },
+    { angle: 120, icon: "💊" },
+    { angle: 150, icon: "📦" },
+  ],
+  [
+    { angle: 180, icon: "🧬" },
+    { angle: 210, icon: "🎯" },
+    { angle: 240, icon: "🚀" },
+  ],
+  [
+    { angle: 270, icon: "🧠" },
+    { angle: 300, icon: "🎮" },
+    { angle: 330, icon: "🧰" },
+  ],
+];
+
 function App() {
   return (
     <main className="h-screen w-screen bg-black flex justify-center items-center">
@@ -23,7 +46,7 @@ function App() {
               transformOrigin: "50% 50%",
               backgroundColor: `rgba(80, 80, 80, 0.${Math.abs(i + 1 - 8)})`,
               zIndex: `${Math.abs(i - 8)}`,
-              animation: `scale 2.3s cubic-bezier(0.7, 0, 0, 1.6) infinite`,
+              animation: `scale 3s cubic-bezier(0.6, 0, 0, 1.7) infinite`,
               animationDelay: `${i * 0.06}s`,
             }}
           >
