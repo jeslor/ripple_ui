@@ -19,7 +19,7 @@ const Ring = ({ ring, i }) => {
     return (
       <div
         key={index}
-        className={`absolute size-9 rounded-full bg-white shadow-lg flex items-center justify-center `}
+        className={`absolute size-9 rounded-full bg-white shadow-lg flex items-center justify-center cursor-pointer hover:scale-130 transition-all duration-300 ease-in-out`}
         style={{
           border: `2px solid ${getRandomColor()}`,
           animation: `scale 1s linear infinite alternate`,
