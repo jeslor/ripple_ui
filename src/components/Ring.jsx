@@ -1,7 +1,15 @@
 import React from "react";
+const getRandomColor = () => {
+  const letters = "0123456789ABCDEF";
+  let color = "#";
+  for (let i = 0; i < 6; i++) {
+    color += letters[Math.floor(Math.random() * 16)];
+  }
+  return color;
+};
 
 const Ring = ({ ring, i }) => {
-  const ringRadius = 200 + i * 60;
+  const ringRadius = 200 + i * 80;
   const ringIcons = ring.map(({ angle, icon }, index) => {
     const radius = ringRadius / 2;
     const rad = (angle * Math.PI) / 180;
@@ -10,9 +18,10 @@ const Ring = ({ ring, i }) => {
 
     return (
       <div
-        key={i}
-        className={`absolute  w-10 h-10 rounded-full bg-white shadow-lg flex items-center justify-center `}
+        key={index}
+        className={`absolute size-9 rounded-full bg-white shadow-lg flex items-center justify-center `}
         style={{
+          border: `2px solid ${getRandomColor()}`,
           animation: `scale 1s linear infinite alternate`,
           left: `calc(50% + ${x}px - 20px)`,
           top: `calc(50% + ${y}px - 20px)`,
@@ -30,7 +39,7 @@ const Ring = ({ ring, i }) => {
       style={{
         width: `${ringRadius}px`,
         height: `${ringRadius}px`,
-        transition: `width 2s cubic-bezier(0.66, 0, 0, 1.2)`,
+        transition: `width 1.7s cubic-bezier(0.66, 0, 0, 1.2)`,
         borderColor: `rgba(100, 100, 100, 0.${Math.abs(i + 1 - 9)})`,
         borderRadius: "50%",
         transformOrigin: "50% 50%",

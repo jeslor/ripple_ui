@@ -7,12 +7,12 @@ const rings = [
   [
     { angle: 0, icon: "🔥" },
     { angle: 30, icon: "⚡" },
-    { angle: 60, icon: "💧" },
+    { angle: 300, icon: "💧" },
   ],
   [],
   [
     { angle: 180, icon: "🧬" },
-    { angle: 210, icon: "🎯" },
+    { angle: 300, icon: "🎯" },
     { angle: 240, icon: "🚀" },
   ],
   [
