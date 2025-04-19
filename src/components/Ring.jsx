@@ -23,6 +23,7 @@ const Ring = ({ ring, i }) => {
         style={{
           border: `2px solid ${getRandomColor()}`,
           animation: `scale 1s linear infinite alternate`,
+          transitionDelay: `${index * 0.1}s`,
           left: `calc(50% + ${x}px - 20px)`,
           top: `calc(50% + ${y}px - 20px)`,
         }}
