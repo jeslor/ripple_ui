@@ -39,14 +39,14 @@ const Ring = ({ ring, i }) => {
       style={{
         width: `${ringRadius}px`,
         height: `${ringRadius}px`,
-        transition: `width 1.7s cubic-bezier(0.66, 0, 0, 1.2)`,
+        transition: `width 1.7s cubic-bezier(.33,.46,.83,.8)`,
         borderColor: `rgba(100, 100, 100, 0.${Math.abs(i + 1 - 9)})`,
         borderRadius: "50%",
         transformOrigin: "50% 50%",
         backgroundColor: `rgba(80, 80, 80, 0.${Math.abs(i + 1 - 8)})`,
         zIndex: `${Math.abs(i - 8)}`,
-        animation: `scale 3s cubic-bezier(0.6, 0, 0, 1.8) infinite`,
-        animationDelay: `${i * 0.06}s`,
+        animation: `scale 2.7s cubic-bezier(0.45, 0, 0, 1.8) infinite`,
+        animationDelay: `${i * 0.05}s`,
       }}
     >
       {ringIcons}
